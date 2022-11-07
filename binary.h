@@ -10,14 +10,14 @@ void bin3(unsigned n);
 bool parity (unsigned n);
 unsigned twoscmp (unsigned n);
 
-void bin(unsigned n)
+void bin(unsigned n) //unformatted 32 bits
 {
     unsigned i;
     for (i = 1 << 31; i > 0; i = i / 2)
         (n & i) ? printf("1") : printf("0");
 }
 
-void bin2(unsigned n)
+void bin2(unsigned n) //formatted 32 bits
 {
     int c = 0;
     unsigned i;
@@ -31,7 +31,7 @@ void bin2(unsigned n)
     printf("\n");
 }
 
-void bin3(unsigned n)
+void bin3(unsigned n) //unformatted 8 bits
 {
     int i;
     for(i = 8; i > -1; i--)
@@ -43,7 +43,7 @@ void bin3(unsigned n)
     }
 }
 
-bool parity (unsigned n)
+bool parity (unsigned n) // return parity bit odd parity
 {
 
     unsigned i;
@@ -57,7 +57,7 @@ bool parity (unsigned n)
     return parity;
 }
 
-unsigned twoscmp (unsigned n)
+unsigned twoscmp (unsigned n) // twos compliment
 {
     return ((~n)+1);
 }
