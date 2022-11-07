@@ -10,12 +10,23 @@ int getSize (char * s) {
 
 int main()
 {
-    char* c = "Hello";
+    char* c = "Ababab";
+    unsigned sum = 0;
     for(int i = 0; i < getSize(c); i++)
     {
         bin3(c[i]);
         printf(" ");
     }
     printf("\n");
+    for(int i = 0; i < getSize(c); i++)
+    {
+        sum+=c[i];
+    }
+    unsigned checksum = twoscmp(sum) & 0xFF;
+    bin2(checksum);
+    printf("%X\n", checksum);
+    bin2(sum + checksum);
+
+
     return 0;
 }
